@@ -5,13 +5,17 @@ module.exports = {
     extend: {
       colors: {
         forest: {
-          darkest: '#081C15',  // Text color
-          primary: '#355E3B',  // Primary color for buttons and links
-          secondary: '#8A9A5B',  // Secondary background color
-          tertiaryDark: '#014421',  // Tertiary color (used for button backgrounds)
-          tertiaryLight: '#BCB88A',  // Lighter tertiary color (used for hover states)
+          txtcol: '#081C15', 
+          primary: '#355E3B',
+          secondary: '#8A9A5B',
+          tertiaryDark: '#014421', 
+          tertiaryLight: '#BCB88A',
+          light: '#BCB88A',
         },
       },
+      backgroundImage: theme => ({
+        'tertiary-gradient': `linear-gradient(135deg, ${theme('colors.forest.tertiaryDark')} 0%, ${theme('colors.forest.tertiaryLight')} 100%)`,
+      }),
     },
   },
   plugins: [],
